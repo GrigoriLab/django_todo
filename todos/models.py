@@ -12,3 +12,11 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.title
+
+class TinyTrackerReport(models.Model):
+    date = models.DateTimeField()
+    value = models.TextField()
+    state = models.TextField()
+
+    def __str__(self):
+        return "Value: " + self.value + ", State: " + self.state + ", Date: " + str(self.date)
